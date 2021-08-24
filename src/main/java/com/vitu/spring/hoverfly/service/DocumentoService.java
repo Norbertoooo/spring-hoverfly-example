@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(url = "http://documento-service-api:8082", name = "documento-service-client")
+// MockServer @FeignClient(url = "http://localhost:8082", name = "documento-service-client")
 public interface DocumentoService {
 
     @GetMapping(value = "/documentos/{id}")

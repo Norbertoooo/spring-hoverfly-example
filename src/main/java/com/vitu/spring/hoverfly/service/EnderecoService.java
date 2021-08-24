@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(url = "http://endereco-service-api:8083", name = "endereco-service-client")
+// MockServer @FeignClient(url = "http://localhost:8083", name = "endereco-service-client")
 public interface EnderecoService {
 
-    @GetMapping(value = "/endereco/{id}")
+    @GetMapping(value = "/enderecos/{id}")
     Endereco getEnderecoById(@PathVariable Long id);
 
 }
